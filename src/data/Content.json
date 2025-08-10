@@ -1,0 +1,320 @@
+{
+  "hero": {
+    "title": "GO LEGAL —",
+    "highlight": "WHERE LAW MEETS CLARITY",
+    "subtitle": "Empowering startups and legal professionals with simplified legal support and modern legal education — all in one place.",
+    "cta1": "Explore Services",
+    "cta2": "Learn More"
+  },
+  "navbar": {
+    "brand": "GO LEGAL",
+    "tagline": "Innovation Backed By Law",
+    "links": ["Home", "About", "Services", "Education", "Contact", "Blog"]
+  },
+  "about": {
+    "title": "ABOUT 'GO LEGAL'",
+    "text": [
+      "At our core, we are committed to promoting transparency in India's legal system. Our aim is to provide accurate and reliable legal information to those who have been misguided by legal professionals. We believe that access to this information should be available to everyone, and we are dedicated to making it a reality.",
+      "In addition, we are also passionate about supporting the next generation of legal professionals. We understand the challenges that newly enrolled advocates and junior lawyers face when trying to find work and gain experience in the field. To address this, we have established a program to outsource legal work to these individuals. By doing so, we not only help them to gain valuable experience and build their portfolios, but we also expand our services and offer more to our clients.",
+      "Our investment in the future of the legal profession reflects our commitment to creating a more just and equitable legal system for all. Through our outsourcing program and other initiatives, we are proud to support and empower the next generation of legal professionals in India."
+    ]
+  },
+  "whyChooseUs": {
+    "title": "WHY CHOOSE US?",
+    "points": [
+      {
+        "icon": "🕒",
+        "title": "Quick Legal Help",
+        "text": "No more long queues or delays. Get expert legal help instantly through our platform, saving your valuable time."
+      },
+      {
+        "icon": "⚖️",
+        "title": "Expert Legal Support",
+        "text": "Our team consists of experienced legal professionals who guide you through every step with clarity and precision."
+      },
+      {
+        "icon": "🔒",
+        "title": "Transparent & Secure",
+        "text": "We promote transparency and ensure all your legal data is protected with utmost confidentiality."
+      },
+      {
+        "icon": "💼",
+        "title": "Supporting New Advocates",
+        "text": "We empower the next generation by outsourcing real legal work to junior lawyers and fresh advocates."
+      }
+    ]
+  },
+  "choosePath": {
+    "sectionTitle": "CHOOSE YOUR PATH",
+    "subtitle": "Empowering startups and legal professionals with simplified legal support and modern legal education — all in one place.",
+    "options": [
+      {
+        "id": "startup-legal",
+        "title": "Affordable Legal Subscriptions Built for Startup Speed & Scale",
+        "subtitle": "From formation to funding, stay legally protected with transparent, affordable monthly plans — no surprises, no hidden fees.",
+        "features": [
+          "Company Registration",
+          "Contract Drafting",
+          "Consultation Calls",
+          "Legal Notices & Compliance"
+        ],
+        "cta": {
+          "label": "View Legal Plans",
+          "link": "/legal-plans",
+          "color": "blue"
+        }
+      },
+      {
+        "id": "legal-training",
+        "title": "Master Law with Real Lawyers, Build Skills Courts Actually Use.",
+        "subtitle": "Join our immersive legal education programs designed to turn law students into courtroom-ready professionals.",
+        "features": [
+          "Advanced Legal Drafting Classes",
+          "Practical Court Procedure Classes",
+          "Get Certified + Internship Access",
+          "Placement Help for Top Performers"
+        ],
+        "cta": {
+          "label": "Join Training Program",
+          "link": "/training",
+          "color": "orange"
+        }
+      }
+    ],
+    "legalPlans": [
+      {
+        "title": "Company Registration",
+        "description": "Get your startup registered with expert legal guidance, full documentation, and MCA compliance.",
+        "icon": "FaBuilding",
+        "features": [
+          "Private Limited, LLP, or OPC Setup",
+          "DIN & DSC for Directors",
+          "Company Name Search & Reservation",
+          "MOA / AOA Drafting & Filing",
+          "PAN, TAN, GST Registration",
+          "Post-registration Compliance Guidance"
+        ]
+      },
+      {
+        "title": "Contract Drafting",
+        "description": "Custom-drafted legal contracts tailored to your startup's exact needs — vetted by real legal experts.",
+        "icon": "FaFileContract",
+        "features": [
+          "Founder Agreements",
+          "Employment Contracts",
+          "Vendor & Client Contracts",
+          "Terms of Use & Privacy Policy",
+          "Investment Term Sheets",
+          "Unlimited Revisions & Edits"
+        ]
+      },
+      {
+        "title": "Consultation Calls",
+        "description": "Speak directly with experienced startup lawyers for legal clarity before you act.",
+        "icon": "FaPhoneAlt",
+        "features": [
+          "Unlimited Legal Questions",
+          "One-on-One Calls with Lawyers",
+          "Pre-call Summary Intake",
+          "Follow-up Notes & Guidance",
+          "Zoom or Phone Scheduling",
+          "Access to Panel of Specialists"
+        ]
+      },
+      {
+        "title": "Legal Notices & Compliance",
+        "description": "Protect your business with professionally drafted legal notices and stay compliant with evolving laws.",
+        "icon": "FaEnvelopeOpenText",
+        "features": [
+          "Customized Legal Notices",
+          "Contract Breach Notices",
+          "Policy Compliance Help",
+          "Startup Law Compliances",
+          "Annual Filings Support",
+          "Government Regulatory Assistance"
+        ]
+      }
+    ],
+    "contractDraftingPlans": {
+      "title": "Contract Drafting — Affordable Subscription Plans",
+      "description": "Custom legal contracts every month, so you never worry about legal drafting again.",
+      "plans": [
+        {
+          "name": "Starter Plan",
+          "price": "₹499/month",
+          "color": "green",
+          "icon": "MdBusinessCenter",
+          "description": "Perfect for freelancers and small startups needing essential legal docs monthly.",
+          "features": [
+            "1 Custom Contract (NDA, Client, Vendor, etc.)",
+            "Website Policies (Terms of Use & Privacy once)",
+            "1 Free Revision",
+            "Email Support",
+            "Turnaround: 4–5 working days"
+          ]
+        },
+        {
+          "name": "Growth Plan",
+          "price": "₹999/month",
+          "color": "blue",
+          "icon": "MdVerifiedUser",
+          "description": "Our most popular plan for growing teams with recurring legal needs.",
+          "features": [
+            "3 Custom Contracts per month",
+            "2 Revisions per Contract",
+            "Terms & Privacy Policy (first month)",
+            "Legal Advice on Clauses",
+            "Priority Support via WhatsApp & Email",
+            "Turnaround: 2–3 working days"
+          ]
+        },
+        {
+          "name": "Legal Pro Plan",
+          "price": "₹1,999/month",
+          "color": "red",
+          "icon": "MdOutlineGavel",
+          "description": "All-inclusive legal contract support for scale-ready businesses.",
+          "features": [
+            "Unlimited Contracts (Founders, Investors, etc.)",
+            "Unlimited Revisions",
+            "Investment Term Sheets, ESOP Agreements",
+            "Clause Negotiation Support",
+            "Dedicated Legal Manager (Zoom Support)",
+            "Editable Word + Signed PDFs",
+            "Turnaround: 24–48 hours"
+          ]
+        }
+      ]
+    },
+    "consultationPlans": {
+      "title": "Book a Legal Consultation",
+      "description": "Get direct legal help from startup-focused lawyers. Choose the support that fits your current need — chat, call, or full session.",
+      "plans": [
+        {
+          "name": "Free Legal Chat",
+          "price": "Free",
+          "duration": "Chat Support",
+          "type": "chat",
+          "description": "For small queries, doubts, or follow-ups — available via email or WhatsApp.",
+          "features": [
+            "Response within 24 hours",
+            "No calls, chat-only",
+            "Basic advice for simple legal doubts"
+          ]
+        },
+        {
+          "name": "Quick Call",
+          "price": "₹299",
+          "duration": "15–20 min",
+          "type": "call",
+          "description": "Ideal for quick advice or document-specific clarification.",
+          "features": [
+            "15–20 min call",
+            "1 document or issue covered",
+            "Email follow-up summary"
+          ]
+        },
+        {
+          "name": "Legal Session",
+          "price": "₹699",
+          "duration": "45–60 min",
+          "type": "call",
+          "description": "Deep 1-on-1 session with expert legal advisor for complex issues.",
+          "features": [
+            "Up to 1 hour consultation",
+            "Multiple documents or queries",
+            "Zoom/Google Meet options",
+            "Follow-up document included"
+          ]
+        }
+      ]
+    },
+    "legalNoticePlans": {
+      "plans": [
+        {
+          "id": "standard-notice-drafting",
+          "name": "Standard Notice Drafting",
+          "price": "1499",
+          "description": "Get a legally sound, custom-drafted notice by real lawyers, reviewed for compliance.",
+          "features": [
+            "1 Legal Notice Drafted",
+            "Customized for your case",
+            "Reviewed by Senior Lawyer",
+            "Turnaround: 2-3 Days",
+            "PDF format delivery"
+          ]
+        },
+        {
+          "id": "premium-legal-compliance",
+          "name": "Premium Legal Compliance",
+          "price": "2999",
+          "description": "End-to-end notice drafting, dispatch, and post-send consultation from expert lawyers.",
+          "features": [
+            "Legal Notice Drafted & Sent",
+            "Post-send Legal Advice (15 mins)",
+            "Courier + Email Dispatch",
+            "Follow-up Support",
+            "Turnaround: 1-2 Days"
+          ]
+        }
+      ]
+    },
+    "trainingPrograms": {
+      "programs": [
+        {
+          "id": "student-program",
+          "title": "Courtroom Skills Internship (For Law Students)",
+          "description": "Internship with live court procedure training, drafting workshops, and placement support.",
+          "icon": "FaUserGraduate",
+          "bg": "from-indigo-700 via-indigo-600 to-indigo-500",
+          "eligibility": "Law Students",
+          "price": "1499",
+          "level": "Beginner to Intermediate",
+          "highlights": [
+            "Practical Legal Drafting Workshops",
+            "Court Procedure Simulation & Live Sessions",
+            "Internship Certificate from Practicing Advocates",
+            "Placement Assistance for Top Performers"
+          ]
+        },
+        {
+          "id": "professional-program",
+          "title": "Applied Legal Skills Program (For Professionals)",
+          "description": "Advanced legal skill-building through real-life drafting, procedure training, and client strategy.",
+          "icon": "FaGavel",
+          "bg": "from-rose-700 via-rose-600 to-rose-500",
+          "eligibility": "Working Legal Professionals & Graduates",
+          "price": "2499",
+          "level": "Intermediate to Advanced",
+          "highlights": [
+            "Advanced Drafting (Contracts, Notices, Opinions)",
+            "Practical Courtroom Procedures & Client Handling",
+            "Certification of Completion with Assessment",
+            "Access to Weekly Expert Q&A Sessions"
+          ]
+        }
+        
+  
+
+      ]
+    }
+    
+  },
+  "payment": {
+    "title": "Secure Payment",
+    "description": "You're almost done! Please confirm your details and proceed with the secure payment.",
+    "orderSummary": {
+      "heading": "Order Summary",
+      "itemsLabel": "Items in Cart",
+      "totalLabel": "Total Amount"
+    },
+    "userDetails": {
+      "heading": "Billing Information",
+      "namePlaceholder": "Full Name",
+      "emailPlaceholder": "Email Address"
+    },
+    "payNow": "Pay Securely",
+    "backToCart": " Back to Cart"
+  }
+}
+

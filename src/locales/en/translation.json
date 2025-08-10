@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "brand": "GoLegal",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "education": "Education",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "heading": "GoLegal — <span class='text-green-700'>Where Law Meets Clarity</span>",
+    "subtext": "Empowering startups and legal professionals with simplified legal support and modern legal education — all in one place.",
+    "servicesBtn": "Explore Services",
+    "educationBtn": "Learn More"
+  }
+}
