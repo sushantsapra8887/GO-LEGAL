@@ -6,15 +6,9 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import emptyCartAnimation from "../lottie/empty.json";
 import { useNavigate } from "react-router-dom";
 
-
 const CartPage = () => {
   const navigate = useNavigate();
-  const {
-    cartItems,
-    removeFromCart,
-    clearCart,
-  } = useCart();
-
+  const { cartItems, removeFromCart, clearCart } = useCart();
   const [selectedItems, setSelectedItems] = useState([]);
 
   useEffect(() => {
@@ -38,33 +32,33 @@ const CartPage = () => {
   };
 
   const getSelectedTotal = () => {
-  return cartItems
-    .filter((item) => selectedItems.includes(`${item.id}-${item.name}`))
-    .reduce((acc, item) => acc + Number(item.price || 0), 0);
-};
+    return cartItems
+      .filter((item) => selectedItems.includes(`${item.id}-${item.name}`))
+      .reduce((acc, item) => acc + Number(item.price || 0), 0);
+  };
 
   const proceedToPayment = () => {
-  const selectedCartItems = cartItems.filter((item) =>
-    selectedItems.includes(`${item.id}-${item.name}`)
-  );
+    const selectedCartItems = cartItems.filter((item) =>
+      selectedItems.includes(`${item.id}-${item.name}`)
+    );
 
-  if (selectedCartItems.length === 0) {
-    alert("Please select at least one item to proceed.");
-    return;
-  }
+    if (selectedCartItems.length === 0) {
+      alert("Please select at least one item to proceed.");
+      return;
+    }
 
-  const totalAmount = selectedCartItems.reduce(
-    (acc, item) => acc + Number(item.price || 0),
-    0
-  );
+    const totalAmount = selectedCartItems.reduce(
+      (acc, item) => acc + Number(item.price || 0),
+      0
+    );
 
-  navigate("/payment", {
-    state: {
-      items: selectedCartItems,
-      total: totalAmount,
-    },
-  });
-};
+    navigate("/payment", {
+      state: {
+        items: selectedCartItems,
+        total: totalAmount,
+      },
+    });
+  };
 
   const getCategoryHeading = (type) => {
     switch (type) {
@@ -83,31 +77,28 @@ const CartPage = () => {
   };
 
   return (
-    
     <>
-    
       <Navbar />
-      <div className="pt-24 max-w-10xl mx-auto p-6 min-h-[80vh] bg-gradient-to-br from-blue-100 via-white to-blue-100" >
-        
-        <h2 className="text-5xl font-extrabold text-gray-700 mb-6 text-center">Your Cart</h2>
+      <div className="pt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[80vh] bg-gradient-to-br from-blue-100 via-white to-blue-100">
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-700 mb-8 text-center">
+          Your Cart
+        </h2>
 
         {cartItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center">
-            <Player
-              autoplay
-              loop
-              src={emptyCartAnimation}
-              className="w-64 h-64"
-            />
-            <p className="text-gray-600 mt-4 text-lg font-medium">
+            <Player autoplay loop src={emptyCartAnimation} className="w-48 h-48 sm:w-64 sm:h-64" />
+            <p className="text-gray-600 mt-4 text-base sm:text-lg font-medium">
               Your cart is empty.
             </p>
           </div>
         ) : (
           <>
             {Object.entries(groupedItems).map(([type, items]) => (
-              <div key={type} className="mb-10 border rounded-lg p-4 shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 border-b pb-2">
+              <div
+                key={type}
+                className="mb-10 border rounded-lg p-4 sm:p-6 shadow-sm bg-white"
+              >
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 border-b pb-2 text-gray-800 text-center sm:text-left">
                   {getCategoryHeading(type)}
                 </h3>
                 <ul className="space-y-4">
@@ -116,30 +107,35 @@ const CartPage = () => {
                     const isConsultation =
                       item.type === "consultationPlans" ||
                       item.type === "appointment";
-                    const isEducation = item.type === "education" || item.category === "education";
+                    const isEducation =
+                      item.type === "education" || item.category === "education";
 
                     return (
                       <li
                         key={itemKey}
                         className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b pb-4"
                       >
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-start sm:items-center gap-3">
                           <input
                             type="checkbox"
                             checked={selectedItems.includes(itemKey)}
                             onChange={() => toggleSelect(itemKey)}
-                            className="accent-blue-600 scale-125"
+                            className="accent-blue-600 scale-110"
                           />
                           <div>
-                            <h4 className="font-semibold text-lg">{item.name}</h4>
-                            <p className="text-gray-600 text-sm">₹{item.price}</p>
+                            <h4 className="font-semibold text-base sm:text-lg">
+                              {item.name}
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base">
+                              ₹{item.price}
+                            </p>
                           </div>
                         </div>
 
                         <div className="flex items-center gap-3">
                           <button
                             onClick={() => removeFromCart(item.id, item.name)}
-                            className="text-red-500 hover:underline ml-4"
+                            className="text-red-500 hover:underline text-sm sm:text-base"
                           >
                             Remove
                           </button>
@@ -147,10 +143,18 @@ const CartPage = () => {
 
                         {isConsultation && item.details && !isEducation && (
                           <div className="bg-blue-50 p-3 mt-2 rounded-md text-sm text-gray-800 shadow">
-                            <p><strong>Client Name:</strong> {item.details.name}</p>
-                            <p><strong>Email:</strong> {item.details.email}</p>
-                            <p><strong>Date:</strong> {item.details.date}</p>
-                            <p><strong>Time:</strong> {item.details.time}</p>
+                            <p>
+                              <strong>Client Name:</strong> {item.details.name}
+                            </p>
+                            <p>
+                              <strong>Email:</strong> {item.details.email}
+                            </p>
+                            <p>
+                              <strong>Date:</strong> {item.details.date}
+                            </p>
+                            <p>
+                              <strong>Time:</strong> {item.details.time}
+                            </p>
                           </div>
                         )}
                       </li>
@@ -162,19 +166,19 @@ const CartPage = () => {
 
             {selectedItems.length > 0 && (
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-8 border-t pt-6">
-                <h4 className="text-xl font-semibold">
+                <h4 className="text-lg sm:text-xl font-semibold text-center sm:text-left">
                   Total: ₹{getSelectedTotal()}
                 </h4>
-                <div className="flex gap-4">
+                <div className="flex gap-3 justify-center sm:justify-end">
                   <button
                     onClick={clearCart}
-                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                    className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-sm sm:text-base"
                   >
                     Clear Cart
                   </button>
                   <button
                     onClick={proceedToPayment}
-                    className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700"
+                    className="bg-green-600 text-white px-5 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
                   >
                     Proceed to Payment
                   </button>

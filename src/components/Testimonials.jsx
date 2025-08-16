@@ -36,21 +36,34 @@ const Testimonials = () => {
   return (
     <section className="bg-gradient-to-b from-[#83839c] to-[#856b6b] py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-white mb-12">
+        {/* Title Animation */}
+        <motion.h2
+          className="text-4xl font-extrabold text-white mb-12"
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           WHAT PEOPLE SAY
-        </h2>
+        </motion.h2>
+
+        {/* Cards */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => {
             const variant = slideVariants[i % slideVariants.length];
             return (
               <motion.div
                 key={i}
+                className="bg-white/10 backdrop-blur-md border border-white/20 text-left rounded-xl p-6 shadow-lg hover:shadow-xl transition text-white"
+                variants={variant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: i * 0.2 }}
-                variants={variant}
-                className="bg-white/10 backdrop-blur-md border border-white/20 text-left rounded-xl p-6 shadow-lg hover:shadow-xl transition text-white"
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{
+                  duration: 0.6,
+                  delay: i * 0.2, // Stagger effect
+                  ease: "easeOut",
+                }}
               >
                 <p className="text-sm mb-4 italic text-white/90">"{t.quote}"</p>
                 <div className="flex items-center gap-1 mb-3 text-yellow-400">

@@ -49,16 +49,17 @@ const LegalNoticePlans = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="flex-grow pt-28 pb-20 px-6 max-w-6xl mx-auto"
+        className="flex-grow pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full"
       >
-        <h1 className="text-4xl font-bold text-center mb-2">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-3">
           Legal Notices & Compliance
         </h1>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto text-sm sm:text-base">
           Professionally drafted legal notices and compliance support with expert guidance.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* ✅ Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {plans.map((plan, index) => {
             const isPremium = plan.name === "Premium Legal Compliance";
 
@@ -72,22 +73,22 @@ const LegalNoticePlans = () => {
             return (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.03 }}
-                className={`rounded-xl shadow-lg p-6 flex flex-col justify-between transition
+                whileHover={{ scale: 1.02 }}
+                className={`rounded-xl shadow-lg p-6 sm:p-8 flex flex-col justify-between transition
                   backdrop-blur-md bg-black/80 border border-white/20 ring-1 ${ringColor}`}
               >
                 <div className="flex flex-col items-center text-center mb-4">
                   {iconMap[plan.name]}
-                  <h2 className={`text-xl font-bold text-white ${titleColor} mb-2`}>
+                  <h2 className={`text-lg sm:text-xl font-bold text-white ${titleColor} mb-2`}>
                     {plan.name}
                   </h2>
-                  <p className="text-sm text-white mb-4">{plan.description}</p>
-                  <p className="text-lg font-extrabold text-white mb-4">
+                  <p className="text-xs sm:text-sm text-white mb-3">{plan.description}</p>
+                  <p className="text-lg sm:text-xl font-extrabold text-white mb-4">
                     ₹{plan.price}
                   </p>
                 </div>
 
-                <ul className="text-sm text-white/85 mb-6 space-y-2">
+                <ul className="text-xs sm:text-sm text-white/85 mb-6 space-y-2">
                   {plan.features.map((f, i) => (
                     <li key={i} className="flex items-start">
                       <span className={`${bulletColor} mr-2 mt-1`}>☑️</span>
@@ -98,7 +99,7 @@ const LegalNoticePlans = () => {
 
                 <button
                   onClick={() => handleAddToCart(plan)}
-                  className={`mt-auto text-white py-2 px-4 rounded-md font-medium transition ${buttonBg}`}
+                  className={`mt-auto w-full sm:w-auto text-center text-white py-2 px-4 rounded-md font-medium transition ${buttonBg}`}
                 >
                   Add to Cart
                 </button>

@@ -1,5 +1,5 @@
 import React from "react";
-import lawImage from "../images/image.png";
+import lawImage from "../images/law12.webp";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {

@@ -25,6 +25,7 @@ import Payment from "./pages/Payment";
 import ThankYou from "./pages/Thankyou"; 
 import OurClients from "./components/OurClients";
 import Stats from "./components/Stats";
+import SearchPage from "./pages/SearchPage"; // ✅ Import added
 
 const AppRoutes = () => {
   const content = useContent();
@@ -47,23 +48,21 @@ const AppRoutes = () => {
                 <section id="home">
                   <Hero />
                   <section id="about">
-                  <About />
-                </section>
-                <OurClients/>
+                    <About />
+                  </section>
+                  <OurClients />
                 </section>
                 <section id="services">
-<ChoosePath />
+                  <ChoosePath />
                 </section>
-                
-                
-                <Stats/>
-                <WhyChooseUs/>
-               
-                <Testimonials/>
+                <Stats />
+                <WhyChooseUs />
+                <Testimonials />
                 <section id="contact">
                   <Footer />
                 </section>
                 <ScrollToHashElement />
+              
               </>
             }
           />
@@ -78,6 +77,7 @@ const AppRoutes = () => {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/thankyou" element={<ThankYou />} />
+          <Route path="/search" element={<SearchPage />} /> {/* ✅ Route fixed */}
         </Routes>
       </main>
     </Router>

@@ -57,7 +57,6 @@ const LegalPlans = () => {
 
       {/* Content wrapper */}
       <div className="relative z-10">
-        {/* Navbar */}
         <Navbar />
 
         {/* Main Content */}
@@ -77,7 +76,7 @@ const LegalPlans = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-600 font-medium text-center max-w-2xl mx-auto mb-16 text-lg"
+            className="text-gray-800 font-medium text-center max-w-2xl mx-auto mb-16 text-lg"
           >
             We’ve designed legal services that are tailor-made for startups and founders. Choose what you need, when you need it.
           </motion.p>
@@ -92,10 +91,12 @@ const LegalPlans = () => {
                 key={index}
                 className="w-full max-w-4xl mx-auto bg-white/90 backdrop-blur-md border border-gray-300 rounded-xl shadow-md px-6 py-6 flex flex-col gap-6 relative"
               >
-                {/* Icon & Title */}
-                <div className="flex justify-center items-center gap-3">
-                  <span className="text-blue-600 text-2xl">{iconMap[plan.title]}</span>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center">
+                {/* ✅ Icon & Title (Centered) */}
+                <div className="flex flex-col items-center gap-3 text-center">
+                  <span className="text-blue-600 text-3xl">
+                    {iconMap[plan.title]}
+                  </span>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-800">
                     {plan.title}
                   </h3>
                 </div>
@@ -103,54 +104,48 @@ const LegalPlans = () => {
                 {/* Content Row */}
                 <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                   {/* Description */}
-                  <div className="w-full md:w-2/3">
+                  <div className="w-full md:w-2/3 text-center md:text-left">
                     <p className="text-gray-700 text-sm mb-3">{plan.description}</p>
-                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 mb-4">
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 mb-4 text-left">
                       {plan.features?.map((point, idx) => (
                         <li key={idx}>{point}</li>
                       ))}
                     </ul>
 
                     {/* Conditional Buttons */}
-                    {plan.title === "Company Registration" && (
-                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="flex justify-center md:justify-start">
+                      {plan.title === "Company Registration" && (
                         <Link to="/start-registration">
                           <button className="bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-md shadow hover:bg-blue-700 transition duration-300">
                             Register Now
                           </button>
                         </Link>
-                      </div>
-                    )}
+                      )}
 
-                    {plan.title === "Contract Drafting" && (
-                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+                      {plan.title === "Contract Drafting" && (
                         <Link to="/request-contract">
                           <button className="bg-purple-600 text-white text-sm font-semibold px-5 py-2 rounded-md shadow hover:bg-purple-700 transition duration-300">
                             Request Contract Drafting
                           </button>
                         </Link>
-                      </div>
-                    )}
+                      )}
 
-                    {plan.title === "Consultation Calls" && (
-                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+                      {plan.title === "Consultation Calls" && (
                         <Link to="/consultation">
                           <button className="bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-md shadow hover:bg-green-700 transition duration-300">
                             Book a Consultation
                           </button>
                         </Link>
-                      </div>
-                    )}
+                      )}
 
-                    {plan.title === "Legal Notices & Compliance" && (
-                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+                      {plan.title === "Legal Notices & Compliance" && (
                         <Link to="/legal-notice">
                           <button className="bg-orange-600 text-white text-sm font-semibold px-5 py-2 rounded-md shadow hover:bg-orange-700 transition duration-300">
                             Get Legal Support
                           </button>
                         </Link>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
 
                   {/* Lottie Animation */}

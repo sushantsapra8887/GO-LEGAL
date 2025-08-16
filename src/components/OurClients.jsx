@@ -17,11 +17,12 @@ const clients = [
 
 export default function OurClients() {
   return (
-    <section className="relative bg-gray-700 py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section className="relative w-full bg-gray-700 py-16 overflow-hidden">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
         {/* Animated heading */}
         <motion.h2
-          className="text-4xl font-extrabold text-white mb-14 tracking-wide"
+          className="text-3xl sm:text-4xl font-extrabold text-white mb-12 tracking-wide"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -36,12 +37,12 @@ export default function OurClients() {
           </motion.span>
         </motion.h2>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        {/* Cards grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {clients.map((client, index) => (
             <motion.div
               key={client.id}
-              className="flex items-center justify-center bg-white rounded-2xl shadow-xl p-8"
+              className="flex items-center justify-center bg-white rounded-xl shadow-lg p-4 sm:p-6"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -54,7 +55,7 @@ export default function OurClients() {
               <motion.img
                 src={client.logo}
                 alt={client.name}
-                className="max-h-28 max-w-full object-contain"
+                className="max-h-20 sm:max-h-24 md:max-h-28 w-auto object-contain"
                 animate={{ y: [0, -8, 0] }}
                 transition={{
                   repeat: Infinity,
